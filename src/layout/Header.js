@@ -82,14 +82,7 @@ const Header = ({ onSidebarOpen }) => {
                         </Button>
                     </Box>
                     <Link to='/' style={{ textDecoration: 'none' }}>
-                        <Box
-                            sx={{
-                                display: {
-                                    md: 'inline',
-                                    xs: 'none'
-                                },
-                            }}
-                        >
+                        <Box>
                             <IconButton size='large' disabled>
                                 <Avatar
                                     variant='rounded'
@@ -115,7 +108,11 @@ const Header = ({ onSidebarOpen }) => {
                                     sx={{
                                         flexGrow: 1,
                                         color: theme.palette.text.primary,
-                                        fontWeight: 'bold'
+                                        fontWeight: 'bold',
+                                        display: {
+                                            md: 'inline',
+                                            xs: 'none'
+                                        },
                                     }}
                                 >
                                     Cryptocurrency Dashboard
