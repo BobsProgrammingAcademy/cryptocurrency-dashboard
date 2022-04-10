@@ -1,0 +1,49 @@
+{
+  "name": "crypto-dashboard",
+  "version": "1.0.0",
+  "description": "Crypto Dashboard",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open --hot",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "author": "MG",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.1.18",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.2",
+    "axios": "^0.26.1",
+    "chart.js": "^3.7.1",
+    "chartjs-plugin-datalabels": "^2.0.0",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^17.0.2",
+    "react-helmet-async": "^1.2.3",
+    "react-router-dom": "^6.2.2",
+    "react-table": "^7.7.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.4",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
