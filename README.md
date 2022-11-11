@@ -10,6 +10,12 @@ This is a cryptocurrency dashboard app built using **React 17**, **Material UI 5
 
 ![plot](https://github.com/BobsProgrammingAcademy/Cryptocurrency-Dashboard/blob/main/public/light_mode.png?raw=true)
 
+## Table of Contents 
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Running the application](#run-the-application)
+- [Customizing the application](#customize-the-application)
+- [Copyright and License](#copyright-and-license)
 
 ## Prerequisites
 
@@ -37,7 +43,7 @@ From the **root** directory run:
 npm start
 ```
 
-## View the application
+### View the application
 
 Go to http://localhost:3000/ to view the application.
 
@@ -57,3 +63,7 @@ To modify the fonts in the application, first, add a new font to the ```public/i
 ### Changing Logo
 
 To modify the logo in the application, make changes in the ```src/layout/Header.js``` and ```src/layout/Sidebar.js``` files.
+
+## Copyright and License
+
+Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
