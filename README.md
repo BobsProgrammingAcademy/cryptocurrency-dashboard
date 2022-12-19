@@ -1,6 +1,6 @@
 # Cryptocurrency Dashboard
 
-This is a cryptocurrency dashboard app built using **React 17**, **Material UI 5** and **Chart.js 3**. The app uses the **CoinGecko API** to get cryptocurrency data such as live prices, trading volume, exchange volumes, historical data, crypto categories, images, and more.
+This is a cryptocurrency dashboard app built using **React 17**, **Material UI 5**, and **Chart.js 3**. The app uses the **CoinGecko API** to get cryptocurrency data such as live prices, trading volume, exchange volumes, historical data, crypto categories, images, and more.
 
 ### Dark mode:
 
