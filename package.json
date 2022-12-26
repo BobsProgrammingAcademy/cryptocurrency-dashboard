@@ -2,10 +2,11 @@
   "name": "crypto-dashboard",
   "version": "1.0.0",
   "description": "Crypto Dashboard",
-  "main": "index.js",
   "scripts": {
-    "start": "webpack serve --open --hot",
-    "build": "webpack --config webpack.config.js --mode production"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "MG",
   "license": "MIT",
@@ -28,22 +29,19 @@
     "react-dom": "^17.0.2",
     "react-helmet-async": "^1.2.3",
     "react-router-dom": "^6.2.2",
+    "react-scripts": "^5.0.1",
     "react-table": "^7.7.0"
   },
-  "devDependencies": {
-    "@babel/cli": "^7.17.6",
-    "@babel/core": "^7.17.8",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "babel-loader": "^8.2.4",
-    "babel-polyfill": "^6.26.0",
-    "css-loader": "^6.7.1",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "style-loader": "^3.3.1",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
