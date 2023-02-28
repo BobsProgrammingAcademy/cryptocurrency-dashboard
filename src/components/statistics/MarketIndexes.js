@@ -10,34 +10,34 @@ import { faChartColumn as ChartColumnIcon } from '@fortawesome/free-solid-svg-ic
 library.add(ChartColumnIcon)
 
 const MarketIndexes = () => {
-    const theme = useTheme();
-
-    const [indexes, setIndexes] = useState([]);
-
-    const fetchIndexes = () => {
-        axios.get('https://api.coingecko.com/api/v3/indexes', {
-            headers: {
-                'Accept': 'application/json',
-            }
-        })
-        .then(response => {
-            setIndexes(response.data);
-        })
-        .catch(error => console.log(error));
-    };
-
-    useEffect(() => {
-        fetchIndexes();
-    }, []);
-    
-    return (
-        <CustomCard 
-            text='MARKET INDEXES'
-            value={indexes.length}
-            color={theme.palette.primary.main}
-            icon={ChartColumnIcon}
-        />
-    );
+  const theme = useTheme();
+  
+  const [indexes, setIndexes] = useState([]);
+  
+  const fetchIndexes = () => {
+    axios.get('https://api.coingecko.com/api/v3/indexes', {
+      headers: {
+        'Accept': 'application/json',
+      }
+    })
+    .then(response => {
+      setIndexes(response.data);
+    })
+    .catch(error => console.log(error));
+  };
+  
+  useEffect(() => {
+    fetchIndexes();
+  }, []);
+  
+  return (
+    <CustomCard 
+      text='MARKET INDEXES'
+      value={indexes.length}
+      color={theme.palette.primary.main}
+      icon={ChartColumnIcon}
+    />
+  );
 };
 
 export default MarketIndexes;
