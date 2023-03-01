@@ -21,89 +21,89 @@ library.add(faCoins)
 import CustomButton from '../components/CustomButton';
 
 const Sidebar = ({ open, onClose }) => {
-    const theme = useTheme();
-
-    return (
-        <React.Fragment>
-            <Drawer
-                anchor='left'
-                onClose={() => onClose()}
-                open={open}
-                variant='temporary'
-                sx={{
-                    '& .MuiPaper-root': {
-                        width: '100%',
-                        maxWidth: 280
-                    },
-                }}
-            >
-                <Box sx={{ height: '100%', padding: 1 }}>
-                    <Box width={1} paddingX={2} paddingY={1}>
-                        <Link to='/' style={{ textDecoration: 'none' }}>
-                            <IconButton size='large' disabled>
-                                <Avatar
-                                    variant='rounded'
-                                    sx={{
-                                        backgroundColor: deepPurple[600],
-                                        height: 52,
-                                        width: 52,
-                                        marginRight: '15px'
-                                    }}
-                                >
-                                    <FontAwesomeIcon 
-                                        icon={faCoins} 
-                                        style={{ 
-                                            color: theme.palette.common.white, 
-                                            height: 30, 
-                                            width: 30 
-                                        }} 
-                                    />
-                                </Avatar>
-                                <Typography 
-                                    variant='h3' 
-                                    component='div' 
-                                    color={theme.palette.text.primary}
-                                    fontWeight='bold'
-                                    textDecoration='none'
-                                    flexGrow={1}
-                                >
-                                    Crypto Dashboard
-                                </Typography>
-                            </IconButton>
-                        </Link>
-                    </Box>
-                    <Box paddingX={2} paddingY={2}>
-                        <Box paddingY={1}>
-                            <CustomButton 
-                                href='/'
-                                icon={<DashboardIcon />}
-                                text='Dashboard'
-                            />
-                        </Box>
-                        <Box paddingY={1}>
-                            <CustomButton 
-                                href='#'
-                                icon={<HelpIcon />}
-                                text='About'
-                            />
-                        </Box>
-                        <Box paddingY={1}>
-                            <CustomButton 
-                                href='#'
-                                icon={<EmailIcon />}
-                                text='Contact'
-                            />
-                        </Box>
-                    </Box>
-                </Box>
-            </Drawer>
-        </React.Fragment>
-    );
+  const theme = useTheme();
+  
+  return (
+    <>
+      <Drawer
+        anchor='left'
+        onClose={() => onClose()}
+        open={open}
+        variant='temporary'
+        sx={{
+          '& .MuiPaper-root': {
+            width: '100%',
+            maxWidth: 280
+          },
+        }}
+      >
+        <Box sx={{ height: '100%', padding: 1 }}>
+          <Box width={1} paddingX={2} paddingY={1}>
+            <Link to='/' style={{ textDecoration: 'none' }}>
+              <IconButton size='large' disabled>
+                <Avatar
+                  variant='rounded'
+                  sx={{
+                    backgroundColor: deepPurple[600],
+                    height: 52,
+                    width: 52,
+                    marginRight: '15px'
+                  }}
+                >
+                  <FontAwesomeIcon 
+                    icon={faCoins} 
+                    style={{ 
+                      color: theme.palette.common.white, 
+                      height: 30, 
+                      width: 30 
+                    }} 
+                  />
+                </Avatar>
+                <Typography 
+                  variant='h3' 
+                  component='div' 
+                  color={theme.palette.text.primary}
+                  fontWeight='bold'
+                  textDecoration='none'
+                  flexGrow={1}
+                >
+                  Crypto Dashboard
+                </Typography>
+              </IconButton>
+            </Link>
+          </Box>
+          <Box paddingX={2} paddingY={2}>
+            <Box paddingY={1}>
+              <CustomButton 
+                href='/'
+                icon={<DashboardIcon />}
+                text='Dashboard'
+              />
+            </Box>
+            <Box paddingY={1}>
+              <CustomButton 
+                href='#'
+                icon={<HelpIcon />}
+                text='About'
+              />
+            </Box>
+            <Box paddingY={1}>
+              <CustomButton 
+                href='#'
+                icon={<EmailIcon />}
+                text='Contact'
+              />
+            </Box>
+          </Box>
+        </Box>
+      </Drawer>
+    </>
+  );
 };
 
 Sidebar.propTypes = {
-    open: PropTypes.bool.isRequired,
-    onClose: PropTypes.func,
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func,
 };
 
 export default Sidebar;
