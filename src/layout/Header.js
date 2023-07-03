@@ -30,7 +30,7 @@ import { deepPurple } from '@mui/material/colors';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-library.add(faCoins)
+library.add(faCoins);
 
 import ColorModeContext from '../components/ColorModeContext';
 import CustomButton from '../components/CustomButton';
@@ -40,15 +40,15 @@ const Header = ({ onSidebarOpen }) => {
   const theme = useTheme();
   const anchorRef = useRef(null);
   const colorMode = useContext(ColorModeContext);
-  
+
   const handleOpen = () => {
     setOpen(true);
   };
-  
+
   const handleClose = () => {
     setOpen(false);
   };
-  
+
   return (
     <>
       <AppBar
@@ -57,11 +57,11 @@ const Header = ({ onSidebarOpen }) => {
           top: 0,
           border: 0,
           backgroundColor: theme.palette.background.default,
-          color: theme.palette.text.secondary
+          color: theme.palette.text.secondary,
         }}
       >
         <Toolbar sx={{ minHeight: 70 }}>
-          <Box 
+          <Box
             alignItems='center'
             sx={{ display: { md: 'block', lg: 'none' } }}
           >
@@ -90,28 +90,28 @@ const Header = ({ onSidebarOpen }) => {
                     backgroundColor: deepPurple[600],
                     height: 52,
                     width: 52,
-                    marginRight: '15px'
+                    marginRight: '15px',
                   }}
                 >
-                  <FontAwesomeIcon 
-                    icon={faCoins} 
-                    style={{ 
-                      color: '#fff', 
-                      height: 30, 
-                      width: 30 
-                    }} 
+                  <FontAwesomeIcon
+                    icon={faCoins}
+                    style={{
+                      color: '#fff',
+                      height: 30,
+                      width: 30,
+                    }}
                   />
                 </Avatar>
-                <Typography 
-                  variant='h3' 
-                  component='div' 
+                <Typography
+                  variant='h3'
+                  component='div'
                   sx={{
                     flexGrow: 1,
                     color: theme.palette.text.primary,
                     fontWeight: 'bold',
                     display: {
                       md: 'inline',
-                      xs: 'none'
+                      xs: 'none',
                     },
                   }}
                 >
@@ -124,56 +124,41 @@ const Header = ({ onSidebarOpen }) => {
           <Box
             sx={{
               alignItems: 'center',
-              display: { lg: 'flex', md: 'none', xs: 'none' }
+              display: { lg: 'flex', md: 'none', xs: 'none' },
             }}
           >
-            <CustomButton 
-              href='/'
-              icon={<DashboardIcon />}
-              text='Dashboard'
-            />
-            <CustomButton 
-              href='#'
-              icon={<HelpIcon />}
-              text='About'
-            />
-            <CustomButton 
-              href='#'
-              icon={<EmailIcon />}
-              text='Contact'
-            />
+            <CustomButton href='/' icon={<DashboardIcon />} text='Dashboard' />
+            <CustomButton href='#' icon={<HelpIcon />} text='About' />
+            <CustomButton href='#' icon={<EmailIcon />} text='Contact' />
           </Box>
           <Divider
             orientation='vertical'
-            sx={{ 
-              height: 32, 
+            sx={{
+              height: 32,
               mx: 2,
-              display: { lg: 'flex', md: 'none', xs: 'none' }
+              display: { lg: 'flex', md: 'none', xs: 'none' },
             }}
           />
           <Box sx={{ display: 'flex' }}>
             <IconButton
               onClick={colorMode.toggleColorMode}
               aria-label='Theme Mode'
-              color={theme.palette.mode === 'dark' ? 'warning' : 'inherit' }
+              color={theme.palette.mode === 'dark' ? 'warning' : 'inherit'}
             >
-              {theme.palette.mode === 'dark' 
-                ? (
-                  <LightModeIcon fontSize='medium' />
-                ) 
-                : (
-                  <DarkModeIcon fontSize='medium' />
-                )
-              }
+              {theme.palette.mode === 'dark' ? (
+                <LightModeIcon fontSize='medium' />
+              ) : (
+                <DarkModeIcon fontSize='medium' />
+              )}
             </IconButton>
           </Box>
           <Divider
             orientation='vertical'
-            sx={{ 
-              height: 32, 
+            sx={{
+              height: 32,
               mx: 2,
-              display: { lg: 'flex', md: 'none', xs: 'none' } 
-            }} 
+              display: { lg: 'flex', md: 'none', xs: 'none' },
+            }}
           />
           <Box sx={{ display: { lg: 'flex', md: 'none', xs: 'none' } }}>
             <Box
@@ -182,16 +167,16 @@ const Header = ({ onSidebarOpen }) => {
               ref={anchorRef}
               sx={{
                 alignItems: 'center',
-                display: 'flex'
+                display: 'flex',
               }}
             >
               <Tooltip title='User Account'>
-                <Avatar 
-                  sx={{ 
-                    height: 32, 
-                    width: 32, 
-                    backgroundColor: theme.palette.primary.main 
-                  }} 
+                <Avatar
+                  sx={{
+                    height: 32,
+                    width: 32,
+                    backgroundColor: theme.palette.primary.main,
+                  }}
                 />
               </Tooltip>
             </Box>
@@ -199,13 +184,13 @@ const Header = ({ onSidebarOpen }) => {
               anchorEl={anchorRef.current}
               anchorOrigin={{
                 horizontal: 'center',
-                vertical: 'bottom'
+                vertical: 'bottom',
               }}
               keepMounted
               onClose={handleClose}
               open={open}
               PaperProps={{
-                sx: { width: 240 }
+                sx: { width: 240 },
               }}
             >
               <Box sx={{ p: 2 }}>
@@ -224,50 +209,39 @@ const Header = ({ onSidebarOpen }) => {
               </Box>
               <Divider />
               <Box sx={{ mt: 2 }}>
-                <MenuItem
-                  component={Link}
-                  to='#'
-                >
+                <MenuItem component={Link} to='#'>
                   <ListItemIcon>
                     <UserIcon fontSize='small' />
                   </ListItemIcon>
                   <ListItemText
-                    primary={(
+                    primary={
                       <Typography
                         color={theme.palette.text.primary}
                         variant='subtitle2'
                       >
                         Profile
                       </Typography>
-                    )}
+                    }
                   />
                 </MenuItem>
-                <MenuItem
-                  component={Link}
-                  to='#'
-                >
+                <MenuItem component={Link} to='#'>
                   <ListItemIcon>
                     <SettingsIcon fontSize='small' />
                   </ListItemIcon>
                   <ListItemText
-                    primary={(
+                    primary={
                       <Typography
                         color={theme.palette.text.primary}
                         variant='subtitle2'
                       >
                         Settings
                       </Typography>
-                    )}
+                    }
                   />
                 </MenuItem>
               </Box>
               <Box sx={{ p: 2 }}>
-                <Button
-                  color='primary'
-                  fullWidth
-                  variant='outlined'
-                  href='#'
-                >
+                <Button color='primary' fullWidth variant='outlined' href='#'>
                   Logout
                 </Button>
               </Box>

@@ -16,13 +16,13 @@ import { deepPurple } from '@mui/material/colors';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-library.add(faCoins)
+library.add(faCoins);
 
 import CustomButton from '../components/CustomButton';
 
 const Sidebar = ({ open, onClose }) => {
   const theme = useTheme();
-  
+
   return (
     <>
       <Drawer
@@ -33,7 +33,7 @@ const Sidebar = ({ open, onClose }) => {
         sx={{
           '& .MuiPaper-root': {
             width: '100%',
-            maxWidth: 280
+            maxWidth: 280,
           },
         }}
       >
@@ -47,21 +47,21 @@ const Sidebar = ({ open, onClose }) => {
                     backgroundColor: deepPurple[600],
                     height: 52,
                     width: 52,
-                    marginRight: '15px'
+                    marginRight: '15px',
                   }}
                 >
-                  <FontAwesomeIcon 
-                    icon={faCoins} 
-                    style={{ 
-                      color: theme.palette.common.white, 
-                      height: 30, 
-                      width: 30 
-                    }} 
+                  <FontAwesomeIcon
+                    icon={faCoins}
+                    style={{
+                      color: theme.palette.common.white,
+                      height: 30,
+                      width: 30,
+                    }}
                   />
                 </Avatar>
-                <Typography 
-                  variant='h3' 
-                  component='div' 
+                <Typography
+                  variant='h3'
+                  component='div'
                   color={theme.palette.text.primary}
                   fontWeight='bold'
                   textDecoration='none'
@@ -74,25 +74,17 @@ const Sidebar = ({ open, onClose }) => {
           </Box>
           <Box paddingX={2} paddingY={2}>
             <Box paddingY={1}>
-              <CustomButton 
+              <CustomButton
                 href='/'
                 icon={<DashboardIcon />}
                 text='Dashboard'
               />
             </Box>
             <Box paddingY={1}>
-              <CustomButton 
-                href='#'
-                icon={<HelpIcon />}
-                text='About'
-              />
+              <CustomButton href='#' icon={<HelpIcon />} text='About' />
             </Box>
             <Box paddingY={1}>
-              <CustomButton 
-                href='#'
-                icon={<EmailIcon />}
-                text='Contact'
-              />
+              <CustomButton href='#' icon={<EmailIcon />} text='Contact' />
             </Box>
           </Box>
         </Box>

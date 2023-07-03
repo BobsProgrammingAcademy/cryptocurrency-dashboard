@@ -16,34 +16,44 @@ Chart.register(...registerables);
 
 const CryptoByVolumePieChart = () => {
   const theme = useTheme();
-  
+
   const [chartData, setChartData] = useState([]);
-  
+
   const fetchTopCoins = () => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=250&page=1&sparkline=false', {
-      headers: {
-        'Accept': 'application/json',
-      }
-    })
-    .then(response => {
-      setChartData(response.data);
-    })
-    .catch(error => console.log(error));
+    axios
+      .get(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=250&page=1&sparkline=false',
+        {
+          headers: {
+            Accept: 'application/json',
+          },
+        }
+      )
+      .then((response) => {
+        setChartData(response.data);
+      })
+      .catch((error) => console.log(error));
   };
-  
+
   useEffect(() => {
     fetchTopCoins();
   }, []);
-  
+
   const data = {
     // copy data from the state to a new array,
     // sort it by total_volume in descending order,
     // take top 3 results using slice
-    // and then map 
-    labels: chartData.sort((a, b) => b.total_volume - a.total_volume).slice(0, 3).map(coin => coin.name),
+    // and then map
+    labels: chartData
+      .sort((a, b) => b.total_volume - a.total_volume)
+      .slice(0, 3)
+      .map((coin) => coin.name),
     datasets: [
       {
-        data: chartData.sort((a, b) => b.total_volume - a.total_volume).slice(0, 3).map(coin => coin.total_volume),
+        data: chartData
+          .sort((a, b) => b.total_volume - a.total_volume)
+          .slice(0, 3)
+          .map((coin) => coin.total_volume),
         backgroundColor: [
           theme.palette.primary.main,
           theme.palette.error.dark,
@@ -54,7 +64,7 @@ const CryptoByVolumePieChart = () => {
       },
     ],
   };
-  
+
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -88,21 +98,17 @@ const CryptoByVolumePieChart = () => {
       },
     },
   };
-  
+
   return (
     <Card>
-      <CardHeader 
-        title='Top 3 Cryptocurrencies By Volume' 
-        subheader='Top 3 Cryptocurrencies Measured By Their Total Volume' 
+      <CardHeader
+        title='Top 3 Cryptocurrencies By Volume'
+        subheader='Top 3 Cryptocurrencies Measured By Their Total Volume'
       />
       <Divider />
       <CardContent>
         <Box sx={{ height: 400, position: 'relative' }}>
-          <Pie
-            data={data} 
-            options={options} 
-            plugins={[ChartDataLabels]} 
-          />
+          <Pie data={data} options={options} plugins={[ChartDataLabels]} />
         </Box>
       </CardContent>
     </Card>

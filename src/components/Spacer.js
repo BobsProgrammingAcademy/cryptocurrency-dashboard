@@ -4,14 +4,14 @@ import { useTheme } from '@mui/material';
 
 const Spacer = ({ sx = [] }) => {
   const theme = useTheme();
-  
+
   return (
     <Box
       sx={[
         {
-          backgroundColor: theme.palette.background.default
+          backgroundColor: theme.palette.background.default,
         },
-        ...[sx]
+        ...[sx],
       ]}
     ></Box>
   );

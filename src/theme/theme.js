@@ -105,5 +105,5 @@ export default {
       divider: 'rgba(0, 0, 0, 0.12)',
     },
     typography: typography,
-  })
+  }),
 };

@@ -15,13 +15,16 @@ const App = () => {
     () => ({
       // The theme mode switch will invoke this method
       toggleColorMode: () => {
-        window.localStorage.setItem('themeMode', mode === 'dark' ? 'light' : 'dark');
+        window.localStorage.setItem(
+          'themeMode',
+          mode === 'dark' ? 'light' : 'dark'
+        );
         setMode((prevMode) => (prevMode === 'dark' ? 'light' : 'dark'));
       },
-    }), 
-    [mode],
+    }),
+    [mode]
   );
-  
+
   useEffect(() => {
     try {
       const localTheme = window.localStorage.getItem('themeMode');
@@ -30,10 +33,10 @@ const App = () => {
       setMode('dark');
     }
   }, []);
-  
+
   return (
     <HelmetProvider>
-      <Helmet 
+      <Helmet
         titleTemplate="%s | Bob's Programming Academy"
         defaultTitle="Bob's Programming Academy"
       />

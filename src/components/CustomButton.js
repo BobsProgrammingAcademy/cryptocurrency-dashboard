@@ -4,7 +4,7 @@ import { useTheme } from '@mui/material/styles';
 
 const CustomButton = ({ href, icon, text }) => {
   const theme = useTheme();
-  
+
   return (
     <Button
       component='a'
@@ -13,24 +13,27 @@ const CustomButton = ({ href, icon, text }) => {
       size='small'
       variant='text'
       sx={{
-        color: theme.palette.mode === 'dark' 
-          ? theme.palette.text.secondary 
-          : theme.palette.text.primary,
+        color:
+          theme.palette.mode === 'dark'
+            ? theme.palette.text.secondary
+            : theme.palette.text.primary,
         fontSize: theme.typography.subtitle1,
         fontWeight: 'medium',
         mr: 2,
         '&:active': {
-          color: theme.palette.mode === 'dark' 
-            ? theme.palette.primary.contrastText
-            : theme.palette.primary.main,
+          color:
+            theme.palette.mode === 'dark'
+              ? theme.palette.primary.contrastText
+              : theme.palette.primary.main,
         },
         '&:hover': {
-          color: theme.palette.mode === 'dark' 
-            ? theme.palette.primary.contrastText 
-            : theme.palette.primary.main,
+          color:
+            theme.palette.mode === 'dark'
+              ? theme.palette.primary.contrastText
+              : theme.palette.primary.main,
         },
         '& svg': {
-          mr: 0.5
+          mr: 0.5,
         },
       }}
     >

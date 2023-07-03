@@ -19,40 +19,44 @@ import TablePaginationActions from './TablePaginationActions';
 
 const CoinMarkets = () => {
   const theme = useTheme();
-  
+
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState('');
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
-  
+
   const handleChange = (e) => {
     setSearch(e.target.value);
   };
-  
-  const filteredCoins = coins.filter(coin =>
+
+  const filteredCoins = coins.filter((coin) =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
-  
+
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
-  
+
   const fetchCoinMarkets = () => {
-    axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=250&page=1&sparkline=false', {
-      headers: {
-        'Accept': 'application/json',
-      }
-    })
-    .then(response => {
-      setCoins(response.data);
-    })
-    .catch(error => console.log(error));
+    axios
+      .get(
+        'https://api.coingecko.com/api/v3/coins/markets?vs_currency=USD&order=market_cap_desc&per_page=250&page=1&sparkline=false',
+        {
+          headers: {
+            Accept: 'application/json',
+          },
+        }
+      )
+      .then((response) => {
+        setCoins(response.data);
+      })
+      .catch((error) => console.log(error));
   };
-  
+
   useEffect(() => {
     fetchCoinMarkets();
   }, []);
-  
+
   return (
     <>
       <Box>
@@ -69,7 +73,7 @@ const CoinMarkets = () => {
                           <SearchIcon />
                         </SvgIcon>
                       </InputAdornment>
-                    )
+                    ),
                   }}
                   placeholder='Search a cryptocurrency'
                   variant='outlined'
@@ -97,14 +101,17 @@ const CoinMarkets = () => {
               </TableHead>
               <TableBody>
                 {(rowsPerPage > 0
-                  ? filteredCoins.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  ? filteredCoins.slice(
+                      page * rowsPerPage,
+                      page * rowsPerPage + rowsPerPage
+                    )
                   : filteredCoins
-                ).map(coin => (
+                ).map((coin) => (
                   <TableRow hover key={coin.id}>
                     <TableCell>
-                      <img 
-                        src={coin.image} 
-                        alt='' 
+                      <img
+                        src={coin.image}
+                        alt=''
                         style={{ height: '30px', width: '30px' }}
                       />
                     </TableCell>
@@ -112,30 +119,29 @@ const CoinMarkets = () => {
                     <TableCell>{coin.symbol}</TableCell>
                     <TableCell>${coin.current_price.toFixed(2)}</TableCell>
                     <TableCell>
-                      {coin.price_change_percentage_24h > 0 
-                        ? (
-                          <span 
-                            style={{ 
-                              color: theme.palette.mode === 'dark' 
-                                ? theme.palette.success.main 
-                                : theme.palette.success.dark
-                              }}
-                          >
-                            {coin.price_change_percentage_24h.toFixed(2)}%
-                          </span>
-                        ) 
-                        : (
-                          <span 
-                            style={{ 
-                              color: theme.palette.mode === 'dark' 
-                                ? theme.palette.error.main 
-                                : theme.palette.error.dark
-                            }}
-                          >
-                            {coin.price_change_percentage_24h.toFixed(2)}%
-                          </span>
-                        )
-                      }
+                      {coin.price_change_percentage_24h > 0 ? (
+                        <span
+                          style={{
+                            color:
+                              theme.palette.mode === 'dark'
+                                ? theme.palette.success.main
+                                : theme.palette.success.dark,
+                          }}
+                        >
+                          {coin.price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                      ) : (
+                        <span
+                          style={{
+                            color:
+                              theme.palette.mode === 'dark'
+                                ? theme.palette.error.main
+                                : theme.palette.error.dark,
+                          }}
+                        >
+                          {coin.price_change_percentage_24h.toFixed(2)}%
+                        </span>
+                      )}
                     </TableCell>
                     <TableCell>${coin.total_volume.toLocaleString()}</TableCell>
                     <TableCell>${coin.market_cap.toLocaleString()}</TableCell>
@@ -151,7 +157,7 @@ const CoinMarkets = () => {
               page={page}
               onPageChange={handleChangePage}
               ActionsComponent={TablePaginationActions}
-              sx={{ display:'flex', justifyContent: 'center' }}
+              sx={{ display: 'flex', justifyContent: 'center' }}
             />
           </Box>
         </Card>
