@@ -43,7 +43,7 @@ From the **root** directory run:
 npm start
 ```
 
-### View the application
+## View the application
 
 Go to http://localhost:3000/ to view the application.
 
