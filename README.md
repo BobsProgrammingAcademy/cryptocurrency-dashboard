@@ -17,7 +17,7 @@ This is a cryptocurrency dashboard app built using **React 17**, **Material UI 5
 - [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
 
-## Prerequisites
+### Prerequisites
 
 Install the following prerequisites:
 
@@ -25,9 +25,9 @@ Install the following prerequisites:
 2. [Visual Studio Code](https://code.visualstudio.com/download)
 
 
-## Installation
+### Installation
 
-### Install required dependencies
+#### Install required dependencies
 
 From the **root** directory run:
 
@@ -35,7 +35,7 @@ From the **root** directory run:
 npm install
 ```
 
-## Run the application
+### Run the application
 
 From the **root** directory run:
 
@@ -43,27 +43,27 @@ From the **root** directory run:
 npm start
 ```
 
-## View the application
+### View the application
 
 Go to http://localhost:3000/ to view the application.
 
 
-## Customize the application
+### Customize the application
 
 This section describes how to customize the application. 
 
-### Changing Colors
+#### Changing Colors
 
 To modify the colors in the application, make changes in the ```src/theme/theme.js``` file.
 
-### Changing Fonts
+#### Changing Fonts
 
 To modify the fonts in the application, first, add a new font to the ```public/index.html``` file, and then make changes in the ```src/theme/typography.js``` file.
 
-### Changing Logo
+#### Changing Logo
 
 To modify the logo in the application, make changes in the ```src/layout/Header.js``` and ```src/layout/Sidebar.js``` files.
 
-## Copyright and License
+### Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
