@@ -29,7 +29,7 @@ Install the following prerequisites:
 
 #### Install required dependencies
 
-From the **root** directory run:
+From the **root** directory, run:
 
 ```bash
 npm install
@@ -37,7 +37,7 @@ npm install
 
 ### Run the application
 
-From the **root** directory run:
+From the **root** directory, run:
 
 ```bash
 npm start
