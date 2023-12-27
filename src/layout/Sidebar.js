@@ -12,13 +12,13 @@ import HelpIcon from '@mui/icons-material/HelpOutlineOutlined';
 import { useTheme } from '@mui/material/styles';
 import { deepPurple } from '@mui/material/colors';
 
+import CustomButton from '../components/CustomButton';
+
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(faCoins);
-
-import CustomButton from '../components/CustomButton';
 
 const Sidebar = ({ open, onClose }) => {
   const theme = useTheme();

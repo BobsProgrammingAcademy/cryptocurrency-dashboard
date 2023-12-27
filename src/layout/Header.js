@@ -26,14 +26,14 @@ import UserIcon from '@mui/icons-material/Person';
 import { alpha, useTheme } from '@mui/material/styles';
 import { deepPurple } from '@mui/material/colors';
 
+import ColorModeContext from '../components/ColorModeContext';
+import CustomButton from '../components/CustomButton';
+
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(faCoins);
-
-import ColorModeContext from '../components/ColorModeContext';
-import CustomButton from '../components/CustomButton';
 
 const Header = ({ onSidebarOpen }) => {
   const [open, setOpen] = useState(false);

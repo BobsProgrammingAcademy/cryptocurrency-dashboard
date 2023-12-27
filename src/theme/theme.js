@@ -4,7 +4,7 @@ import { green, red, yellow, orange } from '@mui/material/colors';
 import components from './components';
 import typography from './typography';
 
-export default {
+const theme = {
   dark: createTheme({
     palette: {
       mode: 'dark',
@@ -107,3 +107,5 @@ export default {
     typography: typography,
   }),
 };
+
+export default theme;
