@@ -1,32 +1,21 @@
 module.exports = {
   roots: ['<rootDir>/src'],
   moduleDirectories: ['node_modules', './src'],
-  preset: 'ts-jest',
+  moduleFileExtensions: ['js', 'jsx'],
   testEnvironment: 'jest-environment-jsdom',
-  testEnvironmentOptions: {
-    url: 'http://127.0.0.1:8000/',
-  },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  transform: {
+    '^.+\\.(j|t)sx?$': 'babel-jest',
+  },
   moduleNameMapper: {
     // Handle image imports
     '\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/src/tests/mocks/fileMock.ts',
+      '<rootDir>/src/tests/mocks/fileMock.js',
 
     // Handle CSS imports (without CSS modules)
     '\\.(css|less)$': '<rootDir>/src/tests/mocks/fileMock.css',
 
-    // Handle react-leaflet imports
-    'react-leaflet': '<rootDir>/src/tests/mocks/fileMock.ts',
+    // Handle charts
+    'react-chartjs-2': '<rootDir>/src/tests/mocks/chartsMock.js',
   },
-  transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': ['ts-jest', { isolatedModules: true }],
-  },
-};
-
-module.exports = {
-  collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx}'],
-  coverageDirectory: 'coverage',
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
 };
