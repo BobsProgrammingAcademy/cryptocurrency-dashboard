@@ -1,9 +1,10 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
-  "extends": ["react-app", "prettier"],
+  "extends": ["react-app", "prettier", "plugin:jest/recommended"],
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
@@ -11,7 +12,7 @@
       "jsx": true
     }
   },
-  "plugins": ["react", "react-hooks"],
+  "plugins": ["react", "react-hooks", "jest"],
   "settings": {
     "react": {
       "version": "detect"
@@ -19,5 +20,6 @@
   },
   "rules": {
     //add customize rules here as per your project's needs
+    "import/extensions": "off"
   }
 }
