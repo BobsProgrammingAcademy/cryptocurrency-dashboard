@@ -17,5 +17,7 @@ module.exports = {
 
     // Handle charts
     'react-chartjs-2': '<rootDir>/src/tests/mocks/chartsMock.js',
+    'chart.js': '<rootDir>/src/tests/mocks/chartsMock.js',
+    'chartjs-plugin-datalabels': '<rootDir>/src/tests/mocks/chartsMock.js',
   },
 };
