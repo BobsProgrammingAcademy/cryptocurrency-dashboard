@@ -60,7 +60,7 @@ const CoinMarkets = () => {
   return (
     <>
       <Box>
-        <Box sx={{ mt: 3 }}>
+        <Box sx={{ marginTop: 3 }}>
           <Card>
             <CardContent>
               <Box sx={{ maxWidth: 500 }}>
@@ -84,9 +84,9 @@ const CoinMarkets = () => {
           </Card>
         </Box>
       </Box>
-      <Box sx={{ pt: 3 }}>
+      <Box sx={{ paddingTop: 3 }}>
         <Card>
-          <Box sx={{ minWidth: 1050, pb: 3 }}>
+          <Box sx={{ minWidth: 1050, paddingBottom: 3 }}>
             <Table>
               <TableHead>
                 <TableRow>
