@@ -19,7 +19,7 @@ const CustomButton = ({ href, icon, text }) => {
             : theme.palette.text.primary,
         fontSize: theme.typography.subtitle1,
         fontWeight: 'medium',
-        mr: 2,
+        marginRight: 2,
         '&:active': {
           color:
             theme.palette.mode === 'dark'
@@ -33,7 +33,7 @@ const CustomButton = ({ href, icon, text }) => {
               : theme.palette.primary.main,
         },
         '& svg': {
-          mr: 0.5,
+          marginRight: 0.5,
         },
       }}
     >

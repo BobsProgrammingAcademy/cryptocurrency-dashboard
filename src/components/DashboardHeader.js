@@ -23,7 +23,7 @@ const DashboardHeader = () => {
           <Typography color={theme.palette.text.primary} variant='h2'>
             Overview
           </Typography>
-          <Box sx={{ pt: 2 }}>
+          <Box sx={{ paddingTop: 2 }}>
             <Typography color={theme.palette.text.secondary} variant='h5'>
               <span>{'Today:'}</span>{' '}
               <span
