@@ -208,7 +208,7 @@ const Header = ({ onSidebarOpen }) => {
                 </Typography>
               </Box>
               <Divider />
-              <Box sx={{ mt: 2 }}>
+              <Box sx={{ marginTop: 2 }}>
                 <MenuItem component={Link} to='#'>
                   <ListItemIcon>
                     <UserIcon fontSize='small' />

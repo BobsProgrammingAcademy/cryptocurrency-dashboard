@@ -79,7 +79,7 @@ const Dashboard = () => {
           </Grid>
         </Container>
       </Box>
-      <Spacer sx={{ pt: 7 }} />
+      <Spacer sx={{ paddingTop: 7 }} />
     </>
   );
 };
