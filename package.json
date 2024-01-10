@@ -2,6 +2,8 @@
   "name": "crypto-dashboard",
   "version": "1.0.0",
   "description": "Crypto Dashboard",
+  "author": "MG",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -20,8 +22,6 @@
       "npm run format:check"
     ]
   },
-  "author": "MG",
-  "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
