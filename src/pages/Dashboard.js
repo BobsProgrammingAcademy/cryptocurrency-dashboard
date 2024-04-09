@@ -31,7 +31,7 @@ const Dashboard = () => {
         sx={{
           backgroundColor: theme.palette.background.default,
           minHeight: '100%',
-          py: 8,
+          paddingY: 8,
         }}
       >
         <Container maxWidth={false}>
