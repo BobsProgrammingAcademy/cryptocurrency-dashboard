@@ -240,7 +240,7 @@ const Header = ({ onSidebarOpen }) => {
                   />
                 </MenuItem>
               </Box>
-              <Box sx={{ p: 2 }}>
+              <Box sx={{ padding: 2 }}>
                 <Button color='primary' fullWidth variant='outlined' href='#'>
                   Logout
                 </Button>
