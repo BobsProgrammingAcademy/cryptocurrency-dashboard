@@ -2,11 +2,11 @@
 
 This is a cryptocurrency dashboard app built using **React 18**, **Material UI 5**, and **Chart.js 4**. The app uses the **CoinGecko API** to get cryptocurrency data such as live prices, trading volume, exchange volumes, historical data, crypto categories, images, and more.
 
-### Dark mode:
+## Dark mode:
 
 ![plot](https://github.com/BobsProgrammingAcademy/Cryptocurrency-Dashboard/blob/main/public/dark_mode.png?raw=true)
 
-### Light mode:
+## Light mode:
 
 ![plot](https://github.com/BobsProgrammingAcademy/Cryptocurrency-Dashboard/blob/main/public/light_mode.png?raw=true)
 
@@ -19,16 +19,16 @@ This is a cryptocurrency dashboard app built using **React 18**, **Material UI 5
 - [Customizing the application](#customize-the-application)
 - [Copyright and License](#copyright-and-license)
 
-### Prerequisites
+## Prerequisites
 
 Install the following prerequisites:
 
 1. [Node.js](https://nodejs.org/en/)
 2. [Visual Studio Code](https://code.visualstudio.com/download)
 
-### Installation
+## Installation
 
-#### Install required dependencies
+### Install required dependencies
 
 From the **root** directory, run:
 
@@ -36,7 +36,7 @@ From the **root** directory, run:
 npm install
 ```
 
-### Run the application
+## Run the application
 
 From the **root** directory, run:
 
@@ -44,7 +44,7 @@ From the **root** directory, run:
 npm start
 ```
 
-### Run the tests
+## Run the tests
 
 From the **root** directory, run:
 
@@ -52,26 +52,26 @@ From the **root** directory, run:
 npm run test
 ```
 
-### View the application
+## View the application
 
 Go to http://localhost:3000/ to view the application.
 
-### Customize the application
+## Customize the application
 
 This section describes how to customize the application.
 
-#### Changing Colors
+### Changing Colors
 
 To modify the colors in the application, make changes in the `src/theme/theme.js` file.
 
-#### Changing Fonts
+### Changing Fonts
 
 To modify the fonts in the application, first, add a new font to the `public/index.html` file and then make changes in the `src/theme/typography.js` file.
 
-#### Changing Logo
+### Changing Logo
 
 To modify the logo in the application, make changes in the `src/layout/Header.js` and `src/layout/Sidebar.js` files.
 
-### Copyright and License
+## Copyright and License
 
 Copyright © 2022 Bob's Programming Academy. Code released under the MIT license.
