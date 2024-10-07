@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import numeral from 'numeral';
 import { Chart, registerables } from 'chart.js';
