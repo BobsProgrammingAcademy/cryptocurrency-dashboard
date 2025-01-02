@@ -15,6 +15,10 @@ import Popover from '@mui/material/Popover';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import { alpha, useTheme } from '@mui/material/styles';
+import { deepPurple } from '@mui/material/colors';
+
+// Material Icons
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import DashboardIcon from '@mui/icons-material/DashboardOutlined';
 import EmailIcon from '@mui/icons-material/EmailOutlined';
@@ -23,17 +27,15 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import MenuIcon from '@mui/icons-material/Menu';
 import SettingsIcon from '@mui/icons-material/Settings';
 import UserIcon from '@mui/icons-material/Person';
-import { alpha, useTheme } from '@mui/material/styles';
-import { deepPurple } from '@mui/material/colors';
-
-import ColorModeContext from '../components/ColorModeContext';
-import CustomButton from '../components/CustomButton';
 
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 library.add(faCoins);
+
+import ColorModeContext from '../components/ColorModeContext';
+import CustomButton from '../components/CustomButton';
 
 const Header = ({ onSidebarOpen }) => {
   const [open, setOpen] = useState(false);
