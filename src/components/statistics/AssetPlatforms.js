@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTheme } from '@mui/material/styles';
 
-import CustomCard from '../CustomCard';
-
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChartPie as ChartPieIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(ChartPieIcon);
+
+import CustomCard from '../CustomCard';
 
 const AssetPlatforms = () => {
   const theme = useTheme();
