@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useTheme } from '@mui/material/styles';
 
-import CustomCard from '../CustomCard';
-
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChartArea as ChartAreaIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(ChartAreaIcon);
+
+import CustomCard from '../CustomCard';
 
 const Exchanges = () => {
   const theme = useTheme();
