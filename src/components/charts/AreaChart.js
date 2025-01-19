@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
-import numeral from 'numeral';
 import { Chart, registerables } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import axios from 'axios';
+import numeral from 'numeral';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
