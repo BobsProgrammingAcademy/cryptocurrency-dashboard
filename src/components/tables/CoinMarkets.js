@@ -11,9 +11,11 @@ import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
 import TableRow from '@mui/material/TableRow';
 import TextField from '@mui/material/TextField';
-import SearchIcon from '@mui/icons-material/Search';
 import SvgIcon from '@mui/material/SvgIcon';
 import { useTheme } from '@mui/material/styles';
+
+// Material Icons
+import SearchIcon from '@mui/icons-material/Search';
 
 import TablePaginationActions from './TablePaginationActions';
 
