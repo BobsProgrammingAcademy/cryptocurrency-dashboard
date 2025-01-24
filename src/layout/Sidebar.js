@@ -5,11 +5,13 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
+import { useTheme } from '@mui/material/styles';
+import { deepPurple } from '@mui/material/colors';
+
+// Material Icons
 import DashboardIcon from '@mui/icons-material/DashboardOutlined';
 import EmailIcon from '@mui/icons-material/EmailOutlined';
 import HelpIcon from '@mui/icons-material/HelpOutlineOutlined';
-import { useTheme } from '@mui/material/styles';
-import { deepPurple } from '@mui/material/colors';
 
 // Font Awesome Icon
 import { library } from '@fortawesome/fontawesome-svg-core';
