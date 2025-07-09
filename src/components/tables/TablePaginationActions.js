@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 // Material UI
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
+
+// Material Icons
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
