@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChartPie as ChartPieIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(ChartPieIcon);
 
+// Components
 import CustomCard from '../CustomCard';
 
 const AssetPlatforms = () => {
