@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCoins as CoinsIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(CoinsIcon);
 
+// Components
 import CustomCard from '../CustomCard';
 
 const Categories = () => {
