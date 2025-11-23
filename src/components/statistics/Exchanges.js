@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChartArea as ChartAreaIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(ChartAreaIcon);
 
+// Components
 import CustomCard from '../CustomCard';
 
 const Exchanges = () => {
