@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { faChartColumn as ChartColumnIcon } from '@fortawesome/free-solid-svg-icons';
 library.add(ChartColumnIcon);
 
+// Components
 import CustomCard from '../CustomCard';
 
 const MarketIndexes = () => {
